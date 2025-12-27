@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Red Dirt Roofing & Construction</title>
+
+  <!-- Google tag (gtag.js) - GA4 + Google Ads (single install, no duplicates) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8KPBTTGWS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    // GA4
+    gtag('config', 'G-J8KPBTTGWS');
+
+    // Google Ads base
+    gtag('config', 'AW-17776071408');
+  </script>
+
+  <style>
+    :root {
+      --overlay: rgba(0,0,0,0.28);
+      --text: #ffffff;
+      --accent: #e0462b;
+      --accent-soft: rgba(224,70,43,0.15);
+      --panel-bg: rgba(0,0,0,0.32);
+      --muted: rgba(255,255,255,0.9);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui,-apple-system,BlinkMacSystemFont,"Inter",Arial,sans-serif;
+      color: var(--text);
+    }
+
+    .scroll-bg-page {
+      position: relative;
+      min-height: 100vh;
+      z-index: 0;
+    }
+
+    .scroll-bg-frame {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      transition: background-image 0.18s linear;
+    }
+
+    .scroll-bg-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(circle at top, rgba(0,0,0,0.1), rgba(0,0,0,0.55)),
+        var(--overlay);
+      pointer-events: none;
+    }
+
+    .scroll-bg-content {
+      position: relative;
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 5.5rem 2.2rem 8.5rem;
+    }
+
+    /* HERO: FORM + QUICK INFO */
+    .rdr-hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+      gap: 2.6rem;
+      margin-bottom: 5.2rem;
+      align-items: flex-start;
+    }
+
+    .rdr-form-panel {
+      background: var(--panel-bg);
+      border-radius: 1.25rem;
+      padding: 1.9rem 2rem 1.8rem;
+      border: 1px solid rgba(255,255,255,0.18);
+      box-shadow: 0 18px 45px rgba(0,0,0,0.5);
+      backdrop-filter: blur(16px);
+    }
+
+    .rdr-form-title {
+      font-size: 1.6rem;
+      font-weight: 650;
+      margin-bottom: 0.4rem;
+    }
+
+    .rdr-form-subtitle {
+      font-size: 0.98rem;
+      color: var(--muted);
+      margin-bottom: 1.3rem;
+    }
+
+    .rdr-form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem 1.1rem;
+    }
+
+    .rdr-form-field-full {
+      grid-column: 1 / -1;
+    }
+
+    .rdr-label {
+      display: block;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      margin-bottom: 0.22rem;
+      color: var(--muted);
+    }
+
+    .rdr-input,
+    .rdr-textarea {
+      width: 100%;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.3);
+      background: rgba(0,0,0,0.5);
+      padding: 0.7rem 1.05rem;
+      color: #fff;
+      font-size: 0.92rem;
+      outline: none;
+      transition: border 140ms ease, box-shadow 140ms ease, background 140ms ease;
+    }
+
+    .rdr-textarea {
+      border-radius: 0.95rem;
+      min-height: 95px;
+      resize: vertical;
+    }
+
+    .rdr-input::placeholder,
+    .rdr-textarea::placeholder {
+      color: rgba(255,255,255,0.5);
+    }
+
+    .rdr-input:focus,
+    .rdr-textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px rgba(224,70,43,0.55);
+      background: rgba(0,0,0,0.78);
+    }
+
+    .rdr-required {
+      color: var(--accent);
+      margin-left: 0.12rem;
+    }
+
+    .rdr-form-footer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      align-items: center;
+      margin-top: 1.2rem;
+    }
+
+    /* BUTTONS – GLOBAL */
+    .rdr-btn,
+    .rdr-btn:link,
+    .rdr-btn:visited {
+      border: none;
+      cursor: pointer;
+      padding: 0.8rem 2rem;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      text-decoration: none;
+      color: #fff;
+      transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease, color 150ms ease, border-color 150ms ease;
+      white-space: nowrap;
+    }
+
+    .rdr-btn-primary {
+      background: linear-gradient(135deg, #e0462b, #ff7a45);
+      color: #fff;
+      box-shadow: 0 14px 35px rgba(0,0,0,0.55);
+    }
+
+    .rdr-btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.65);
+    }
+
+    .rdr-btn-ghost {
+      background: rgba(0,0,0,0.46);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.14);
+    }
+
+    .rdr-btn-ghost:hover {
+      background: rgba(0,0,0,0.8);
+    }
+
+    /* HERO QUICK CTA BUTTONS – more modern, match site */
+    .rdr-quick-cta .rdr-btn-accent {
+      background: linear-gradient(135deg, #e0462b, #ff7a45);
+      box-shadow: 0 14px 35px rgba(0,0,0,0.55);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .rdr-quick-cta .rdr-btn-accent:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.7);
+    }
+
+    .rdr-quick-cta .rdr-btn-outline {
+      background: rgba(0,0,0,0.55);
+      border: 1px solid rgba(255,255,255,0.35);
+      box-shadow: 0 10px 26px rgba(0,0,0,0.45);
+    }
+
+    .rdr-quick-cta .rdr-btn-outline:hover {
+      background: rgba(0,0,0,0.9);
+      border-color: #e0462b;
+      transform: translateY(-1px);
+    }
+
+    .rdr-form-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+      opacity: 0.95;
+      margin-top: 0.4rem;
+    }
+
+    .rdr-status {
+      font-size: 0.84rem;
+      margin-top: 0.55rem;
+    }
+
+    .rdr-status-ok { color: #9be7a4; }
+    .rdr-status-error { color: #ffb3b3; }
+
+    /* Hero copy / quick info */
+    .rdr-hero-info { color: #fff; }
+
+    .rdr-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.25rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(0,0,0,0.55);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      margin-bottom: 0.8rem;
+    }
+
+    .rdr-hero-title {
+      font-size: clamp(2.1rem, 3.3vw, 2.8rem);
+      line-height: 1.05;
+      margin-bottom: 0.7rem;
+    }
+
+    .rdr-hero-sub {
+      font-size: 0.98rem;
+      color: var(--muted);
+      max-width: 26rem;
+      margin-bottom: 1.3rem;
+    }
+
+    .rdr-quick-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .rdr-tagline {
+      font-size: 0.86rem;
+      color: var(--muted);
+      max-width: 26rem;
+    }
+
+    /* Sections / services */
+    .rdr-section { margin-bottom: 3.8rem; }
+
+    .rdr-section-title {
+      font-size: 1.32rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .rdr-section-sub {
+      font-size: 0.96rem;
+      color: var(--muted);
+      margin-bottom: 1.4rem;
+      max-width: 48rem;
+    }
+
+    .rdr-services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.6rem 1.8rem;
+    }
+
+    .rdr-service-card {
+      background: rgba(0,0,0,0.58);
+      border-radius: 1rem;
+      padding: 1.4rem 1.5rem;
+      border: 1px solid rgba(255,255,255,0.16);
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease, background 160ms ease;
+    }
+
+    .rdr-service-card:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+      border-color: rgba(224,70,43,0.6);
+      background: rgba(0,0,0,0.7);
+    }
+
+    .rdr-service-name {
+      font-weight: 700;
+      margin-bottom: 0.45rem;
+      font-size: 1.18rem;
+    }
+
+    .rdr-service-blurb {
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.6;
+    }
+
+    .rdr-emergency {
+      background: linear-gradient(120deg, rgba(224,70,43,0.2), rgba(0,0,0,0.85));
+      border-radius: 1.1rem;
+      padding: 1.2rem 1.4rem;
+      border: 1px solid var(--accent-soft);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.9rem 1.6rem;
+      font-size: 0.96rem;
+    }
+
+    .rdr-emergency-label {
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+      font-size: 0.82rem;
+    }
+
+    .rdr-emergency-text {
+      flex: 1 1 260px;
+      color: var(--muted);
+    }
+
+    .rdr-map-panel {
+      background: rgba(0,0,0,0.6);
+      border-radius: 1rem;
+      padding: 1.3rem 1.3rem 1.1rem;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .rdr-map-panel iframe {
+      width: 100%;
+      height: 360px;
+      border: 0;
+      border-radius: 0.8rem;
+    }
+
+    /* MODALS (shared styles) */
+    .rdr-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.75);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      padding: 1.5rem;
+      overflow-y: auto;
+    }
+
+    .rdr-modal-backdrop.rdr-modal-open { display: flex; }
+
+    .rdr-modal {
+      background: rgba(0,0,0,0.9);
+      border-radius: 1rem;
+      padding: 1.5rem 1.6rem 1.4rem;
+      max-width: 480px;
+      width: 100%;
+      border: 1px solid rgba(255,255,255,0.2);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+      max-height: calc(100vh - 3rem);
+      overflow-y: auto;
+    }
+
+    .rdr-modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.8rem;
+      position: sticky;
+      top: 0;
+      padding-bottom: 0.4rem;
+      background: rgba(0,0,0,0.95);
+      z-index: 2;
+    }
+
+    .rdr-modal-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .rdr-modal-close {
+      border: none;
+      background: transparent;
+      color: #fff;
+      font-size: 1.2rem;
+      cursor: pointer;
+      padding: 0.1rem 0.4rem;
+    }
+
+    .rdr-modal-service-label {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .rdr-modal-form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem 1rem;
+    }
+
+    .rdr-modal-form-grid .rdr-form-field-full { grid-column: 1 / -1; }
+
+    .rdr-modal-footer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      align-items: center;
+      margin-top: 0.9rem;
+    }
+
+    .rdr-modal-status { font-size: 0.8rem; margin-top: 0.5rem; }
+    .rdr-modal-status-ok { color: #9be7a4; }
+    .rdr-modal-status-error { color: #ffb3b3; }
+
+    @media (max-width: 1050px) {
+      .rdr-hero { grid-template-columns: minmax(0, 1fr); }
+    }
+
+    @media (max-width: 800px) {
+      .scroll-bg-content { padding: 4.5rem 1.5rem 7rem; }
+      .rdr-services-grid { grid-template-columns: minmax(0, 1fr); }
+    }
+
+    @media (max-width: 480px) {
+      .rdr-form-panel { padding: 1.4rem 1.3rem 1.4rem; }
+      .rdr-form-grid { grid-template-columns: minmax(0, 1fr); }
+      .rdr-modal { padding: 1.2rem 1.1rem 1.1rem; max-height: calc(100vh - 2rem); }
+      .rdr-modal-form-grid { grid-template-columns: minmax(0, 1fr); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="scroll-bg-page" id="scrollBgPage">
+    <div class="scroll-bg-frame" id="scrollBgFrame"></div>
+    <div class="scroll-bg-overlay"></div>
+
+    <div class="scroll-bg-content">
+      <!-- HERO: FORM + INFO -->
+      <section class="rdr-hero">
+        <!-- Transparent lead form -->
+        <div class="rdr-form-panel">
+          <h2 class="rdr-form-title">Request your free inspection</h2>
+          <p class="rdr-form-subtitle">
+            Tell us what&apos;s going on with your roof or project. We&apos;ll call or text you back fast.
+          </p>
+
+          <form id="rdrLeadForm" action="https://formspree.io/f/mdkpnyrq" method="POST">
+            <div class="rdr-form-grid">
+              <div>
+                <label class="rdr-label">Name<span class="rdr-required">*</span></label>
+                <input class="rdr-input" type="text" name="name" placeholder="Full name" required>
+              </div>
+
+              <div>
+                <label class="rdr-label">Phone<span class="rdr-required">*</span></label>
+                <input class="rdr-input" type="tel" name="phone" placeholder="Best number" required>
+              </div>
+
+              <div class="rdr-form-field-full">
+                <label class="rdr-label">Email<span class="rdr-required">*</span></label>
+                <input class="rdr-input" type="email" name="email" placeholder="you@example.com" required>
+              </div>
+
+              <div class="rdr-form-field-full">
+                <label class="rdr-label">How can we help?<span class="rdr-required">*</span></label>
+                <textarea class="rdr-textarea" name="message" placeholder="Leak, missing shingles, new roof, fence, general construction, etc." required></textarea>
+              </div>
+            </div>
+
+            <input type="hidden" name="source" value="Homepage main form">
+
+            <div class="rdr-form-footer">
+              <button type="submit" class="rdr-btn rdr-btn-primary">
+                Send my request
+              </button>
+
+              <a href="tel:9188044094" class="rdr-btn rdr-btn-ghost">
+                Call now
+              </a>
+
+              <!-- SCHEDULE BUTTON: opens modal, stays on page -->
+              <button type="button" class="rdr-btn rdr-btn-ghost" id="rdrScheduleBtn">
+                📅 Schedule online
+              </button>
+            </div>
+
+            <p class="rdr-form-note">
+              All fields are required so we can reach you quickly and understand your project.
+            </p>
+
+            <div id="rdrFormStatus" class="rdr-status" aria-live="polite"></div>
+          </form>
+        </div>
+
+        <!-- Right side: quick info -->
+        <div class="rdr-hero-info">
+          <div class="rdr-badge">
+            <span>Red Dirt Roofing &amp; Construction</span>
+          </div>
+          <h1 class="rdr-hero-title">
+            Roofing, fencing &amp; repairs built on honest work.
+          </h1>
+          <p class="rdr-hero-sub">
+            Local, licensed, and insured. From full roof replacements to emergency tarps, we keep your home covered.
+          </p>
+
+          <div class="rdr-quick-cta">
+            <a href="tel:9188044094" class="rdr-btn rdr-btn-accent">
+              📞 918-804-4094
+            </a>
+            <button type="button" class="rdr-btn rdr-btn-outline" id="rdrScheduleBtnSecondary">
+              📅 Schedule online
+            </button>
+          </div>
+
+          <p class="rdr-tagline">
+            Serving Sapulpa, Tulsa, and surrounding areas with straight answers and solid work.
+          </p>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" class="rdr-section">
+        <h2 class="rdr-section-title">Services</h2>
+        <p class="rdr-section-sub">
+          One crew, multiple solutions — so you don&apos;t have to juggle a bunch of contractors.
+        </p>
+
+        <div class="rdr-services-grid">
+          <div class="rdr-service-card" data-service="Roof Replacement">
+            <div class="rdr-service-name">Roof Replacement</div>
+            <div class="rdr-service-blurb">
+              Full tear-offs, re-roofs, insurance jobs, and upgrades to longer-lasting roofing systems
+              that match your home and your budget.
+            </div>
+          </div>
+          <div class="rdr-service-card" data-service="Roof Repair">
+            <div class="rdr-service-name">Roof Repair</div>
+            <div class="rdr-service-blurb">
+              Leaks, missing shingles, failed pipe boots, flashing issues, and storm damage —
+              we track down the problem and fix it right.
+            </div>
+          </div>
+          <div class="rdr-service-card" data-service="Fence Install / Repair">
+            <div class="rdr-service-name">Fence Install / Repair</div>
+            <div class="rdr-service-blurb">
+              New privacy fences, storm-damaged panels, gates that don&apos;t close right, and general
+              fence repairs to clean up the yard.
+            </div>
+          </div>
+          <div class="rdr-service-card" data-service="General Construction">
+            <div class="rdr-service-name">General Construction</div>
+            <div class="rdr-service-blurb">
+              Exterior repairs, punch-list items, and small projects around the house so you only
+              have to make one call.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EMERGENCY TARPING -->
+      <section class="rdr-section">
+        <div class="rdr-emergency">
+          <div>
+            <div class="rdr-emergency-label">24/7 Emergency Tarping</div>
+            <div class="rdr-emergency-text">
+              Storm just hit? We offer emergency tarping to stop the water now and buy you time
+              for a proper repair or full replacement.
+            </div>
+          </div>
+          <a href="tel:9188044094" class="rdr-btn rdr-btn-primary">
+            Call for emergency help
+          </a>
+        </div>
+      </section>
+
+      <!-- MAP -->
+      <section class="rdr-section">
+        <div class="rdr-map-panel">
+          <h2 class="rdr-section-title">Where we are</h2>
+          <p class="rdr-section-sub">
+            Red Dirt Roofing and Construction &mdash; local to the Tulsa / Sapulpa area.
+          </p>
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d412768.108788297!2d-96.43883333906808!3d36.07518067986058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x63854d8b10127a27%3A0xc70aa07076204659!2sRed%20Dirt%20Roofing%20and%20Construction!5e0!3m2!1sen!2sus!4v1761382886831!5m2!1sen!2sus"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </section>
+
+      <!-- SEO TEXT BLOCK -->
+      <section class="rdr-seo-block" style="max-width:900px;margin:3rem auto 1rem auto;font-size:0.9rem;line-height:1.6;color:#f5f5f5;">
+        <h2 style="font-size:1.25rem;margin-bottom:0.5rem;">
+          Roof Replacement &amp; Repair in Sapulpa, OK – Red Dirt Roofing &amp; Construction
+        </h2>
+
+        <p style="margin-bottom:0.75rem;">
+          <strong>Red Dirt Roofing &amp; Construction</strong> is a locally owned, licensed, and insured roofing company based in
+          Sapulpa, Oklahoma. We specialize in <strong>roof replacement, roof repair, metal roofing, storm damage restoration,
+          and insurance claim assistance</strong> for homeowners across the area. Our mission is simple:
+          <strong>honest inspections, straight answers, and high-quality roofs that stand up to Oklahoma weather.</strong>
+        </p>
+
+        <p style="margin-bottom:0.75rem;">
+          If you’ve noticed missing shingles, leaks, hail impact, wind damage, or aging shingles, our team offers
+          <strong>free roof inspections</strong> and clear, detailed estimates. We work with all major insurance carriers and
+          help you document roof damage so you can navigate your claim with confidence.
+        </p>
+
+        <h3 style="font-size:1.05rem;margin:1.25rem 0 0.5rem;">
+          Roofing services we offer
+        </h3>
+        <ul style="margin:0 0 0.75rem 1.25rem;padding:0;">
+          <li>Full <strong>roof replacement</strong> (asphalt shingles &amp; metal roofing)</li>
+          <li><strong>Roof repair</strong> for leaks, missing shingles, storm issues, and small problem areas</li>
+          <li><strong>Storm, hail, and wind damage</strong> inspections and repairs</li>
+          <li><strong>Insurance claim support</strong> – documentation, photos, and reports for adjusters</li>
+          <li><strong>Metal roofing</strong> installs and upgrades, including pitch transition work</li>
+          <li>Flashing repairs, pipe boot replacement, and ventilation improvements</li>
+          <li>Gutter and downspout replacement on roof projects (where needed)</li>
+        </ul>
+
+        <h3 style="font-size:1.05rem;margin:1.25rem 0 0.5rem;">
+          Areas we serve (within about 35 miles of Sapulpa, Oklahoma)
+        </h3>
+        <p style="margin-bottom:0.75rem;">
+          We proudly serve homeowners within a <strong>35-mile radius of Sapulpa, OK</strong>, including:
+          <strong>Sapulpa, Tulsa, Jenks, Glenpool, Sand Springs, Bixby, Broken Arrow, Kiefer, Kellyville, Mounds, Bristow,
+          Mannford, Drumright, Slick, Beggs</strong> and surrounding nearby communities. If you’re near any of these areas,
+          we likely service your home.
+        </p>
+
+        <h3 style="font-size:1.05rem;margin:1.25rem 0 0.5rem;">
+          Why homeowners choose Red Dirt Roofing &amp; Construction
+        </h3>
+        <ul style="margin:0 0 0.75rem 1.25rem;padding:0;">
+          <li><strong>Local Sapulpa-based company</strong> that understands Oklahoma storms and insurance processes</li>
+          <li><strong>Licensed and insured</strong> roofing contractor providing thorough, professional inspections</li>
+          <li><strong>Free, no-pressure roof inspections</strong> with straightforward explanations</li>
+          <li><strong>Storm-damage and insurance claim experience</strong> from small repairs to full replacements</li>
+          <li><strong>Quality materials</strong> and proven installation methods built for Oklahoma weather</li>
+          <li><strong>Honest pricing</strong> with low overhead so more of your money goes into the roof — not sales gimmicks</li>
+        </ul>
+
+        <p style="margin-top:0.75rem;">
+          If you need a <strong>roof replacement, roof repair, metal roof, or storm damage inspection</strong> anywhere near
+          Sapulpa, Oklahoma, we’d be glad to help.
+          <br>
+          <strong>Call or text: <a href="tel:19188044094" style="color:inherit;text-decoration:underline;">918-804-4094</a></strong>
+          or use the contact form on this page to schedule your <strong>free roof inspection</strong> with
+          Red Dirt Roofing &amp; Construction.
+        </p>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- SERVICE POPUP FORM -->
+  <div class="rdr-modal-backdrop" id="rdrServiceModalBackdrop">
+    <div class="rdr-modal">
+      <div class="rdr-modal-header">
+        <div class="rdr-modal-title">Request more info</div>
+        <button class="rdr-modal-close" type="button" id="rdrModalCloseBtn">&times;</button>
+      </div>
+      <div class="rdr-modal-service-label">
+        Service selected: <span id="rdrModalServiceName"></span>
+      </div>
+      <form id="rdrServiceForm" action="https://formspree.io/f/mdkpnyrq" method="POST">
+        <input type="hidden" name="service" id="rdrModalServiceInput">
+        <input type="hidden" name="source" value="Homepage service modal">
+        <div class="rdr-modal-form-grid">
+          <div>
+            <label class="rdr-label">Name<span class="rdr-required">*</span></label>
+            <input class="rdr-input" type="text" name="name" placeholder="Full name" required>
+          </div>
+          <div>
+            <label class="rdr-label">Phone<span class="rdr-required">*</span></label>
+            <input class="rdr-input" type="tel" name="phone" placeholder="Best number" required>
+          </div>
+          <div class="rdr-form-field-full">
+            <label class="rdr-label">Email<span class="rdr-required">*</span></label>
+            <input class="rdr-input" type="email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="rdr-form-field-full">
+            <label class="rdr-label">Details<span class="rdr-required">*</span></label>
+            <textarea class="rdr-textarea" name="message" placeholder="Tell us a little about this project." required></textarea>
+          </div>
+        </div>
+
+        <div class="rdr-modal-footer">
+          <button type="submit" class="rdr-btn rdr-btn-primary">
+            Send request
+          </button>
+          <button type="button" class="rdr-btn rdr-btn-ghost" id="rdrModalCancelBtn">
+            Cancel
+          </button>
+        </div>
+
+        <div id="rdrServiceFormStatus" class="rdr-modal-status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- SCHEDULE POPUP FORM -->
+  <div class="rdr-modal-backdrop" id="rdrScheduleModalBackdrop">
+    <div class="rdr-modal">
+      <div class="rdr-modal-header">
+        <div class="rdr-modal-title">Schedule your inspection</div>
+        <button class="rdr-modal-close" type="button" id="rdrScheduleModalCloseBtn">&times;</button>
+      </div>
+      <div class="rdr-modal-service-label">
+        Pick your preferred day and time window and we&apos;ll reach out to lock in the schedule.
+      </div>
+      <form id="rdrScheduleForm" action="https://formspree.io/f/mdkpnyrq" method="POST">
+        <input type="hidden" name="source" value="Homepage schedule modal">
+        <div class="rdr-modal-form-grid">
+          <div>
+            <label class="rdr-label">Name<span class="rdr-required">*</span></label>
+            <input class="rdr-input" type="text" name="name" placeholder="Full name" required>
+          </div>
+          <div>
+            <label class="rdr-label">Phone<span class="rdr-required">*</span></label>
+            <input class="rdr-input" type="tel" name="phone" placeholder="Best number" required>
+          </div>
+          <div class="rdr-form-field-full">
+            <label class="rdr-label">Email<span class="rdr-required">*</span></label>
+            <input class="rdr-input" type="email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div>
+            <label class="rdr-label">Preferred Date<span class="rdr-required">*</span></label>
+            <input class="rdr-input" type="date" name="preferred_date" required>
+          </div>
+          <div>
+            <label class="rdr-label">Time Window<span class="rdr-required">*</span></label>
+            <select class="rdr-input" name="time_window" required>
+              <option value="">Select a window</option>
+              <option value="Morning (8–11am)">Morning (8–11am)</option>
+              <option value="Midday (11–2pm)">Midday (11–2pm)</option>
+              <option value="Afternoon (2–5pm)">Afternoon (2–5pm)</option>
+              <option value="Evening (after 5pm)">Evening (after 5pm)</option>
+            </select>
+          </div>
+          <div class="rdr-form-field-full">
+            <label class="rdr-label">Address or Area<span class="rdr-required">*</span></label>
+            <input class="rdr-input" type="text" name="address" placeholder="Street + city or just area" required>
+          </div>
+          <div class="rdr-form-field-full">
+            <label class="rdr-label">Notes<span class="rdr-required">*</span></label>
+            <textarea class="rdr-textarea" name="message" placeholder="Roof age, leaks, hail, anything we should know." required></textarea>
+          </div>
+        </div>
+
+        <div class="rdr-modal-footer">
+          <button type="submit" class="rdr-btn rdr-btn-primary">
+            📅 Send scheduling request
+          </button>
+          <button type="button" class="rdr-btn rdr-btn-ghost" id="rdrScheduleModalCancelBtn">
+            Cancel
+          </button>
+        </div>
+
+        <div id="rdrScheduleFormStatus" class="rdr-modal-status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // ---- Tracking helpers (safe if gtag is blocked/slow) ----
+    function trackEvent(name, params) {
+      try {
+        if (typeof gtag === "function") {
+          gtag("event", name, params || {});
+        }
+      } catch (e) {}
+    }
+
+    // Track click-to-call links as leads
+    function wireCallTracking() {
+      document.querySelectorAll('a[href^="tel:"]').forEach(a => {
+        a.addEventListener("click", () => {
+          trackEvent("call_click", { event_category: "Lead", event_label: a.getAttribute("href") || "tel" });
+        });
+      });
+    }
+    wireCallTracking();
+
+    // BACKGROUND IMAGE SEQUENCE (scroll-controlled)
+    const scrollBgImages = [
+      "https://www.bensroofing.com/wp-content/uploads/2014/11/5738228973_794af5ee94_z-e1426116570452.jpg",
+      "https://www.visualcomfort.com/media/wysiwyg/01_Exterior.png",
+      "https://cdn10.bostonmagazine.com/wp-content/uploads/sites/2/2017/02/beautiful-suburbs-homes-5-630x422.jpg",
+      "https://assets.bravarooftile.com/web/images/Blog/Screen-Shot-2024-09-10-at-9.39.07-AM.png?v=1725979259",
+      "https://assets.bravarooftile.com/web/images/Blog/Screen-Shot-2024-09-10-at-11.10.12-AM.png?v=1725984699",
+      "https://assets.bravarooftile.com/web/images/r5h8brp4n3qsx6nzt8bnk92s.jpeg?v=1671219298",
+      "https://www.roof-crafters.com/hubfs/metal%20roof%20home%20with%20complex%20valleys22.jpg",
+      "https://www.metalroofoutlet.com/wp-content/uploads/2023/07/Vicwest-North-Ridge-Slate-Metal-Roof-Tiles-Metal-Roof-Installation-Tillsonburg-ON-1.jpg",
+      "https://www.valentineroof.com/Content/files/blogs/DJI_0027.jpg?width=1024&height=575"
+    ];
+
+    const frameEl = document.getElementById("scrollBgFrame");
+    const pageEl = document.getElementById("scrollBgPage");
+
+    if (scrollBgImages.length && frameEl && pageEl) {
+      scrollBgImages.forEach(src => {
+        const img = new Image();
+        img.src = src;
+      });
+
+      function setFrame(index) {
+        const safeIndex = Math.max(0, Math.min(scrollBgImages.length - 1, index));
+        frameEl.style.backgroundImage = `url("${scrollBgImages[safeIndex]}")`;
+      }
+
+      function updateFrame() {
+        const scrollTop = window.scrollY || window.pageYOffset || 0;
+        const docHeight = pageEl.scrollHeight;
+        const winHeight = window.innerHeight || 1;
+        const maxScroll = docHeight - winHeight;
+
+        let progress = maxScroll > 0 ? scrollTop / maxScroll : 0;
+        progress = Math.max(0, Math.min(1, progress));
+
+        const frameIndex = Math.round(progress * (scrollBgImages.length - 1));
+        setFrame(frameIndex);
+      }
+
+      let ticking = false;
+      window.addEventListener("scroll", () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            updateFrame();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+
+      window.addEventListener("resize", updateFrame);
+      window.addEventListener("load", updateFrame);
+
+      setFrame(0);
+      updateFrame();
+    }
+
+    // FORMSPREE AJAX SUBMIT (top form - stay on page)
+    const rdrForm = document.getElementById("rdrLeadForm");
+    const rdrStatus = document.getElementById("rdrFormStatus");
+
+    if (rdrForm && rdrStatus) {
+      rdrForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        rdrStatus.textContent = "";
+        rdrStatus.className = "rdr-status";
+
+        trackEvent("lead_form_submit_attempt", { event_category: "Lead", event_label: "Homepage main form" });
+
+        const formData = new FormData(rdrForm);
+
+        try {
+          const response = await fetch(rdrForm.action, {
+            method: "POST",
+            body: formData,
+            headers: { "Accept": "application/json" }
+          });
+
+          if (response.ok) {
+            trackEvent("lead_submit", { event_category: "Lead", event_label: "Homepage main form" });
+
+            rdrStatus.textContent = "Thanks! Your request was sent. We’ll be in touch soon.";
+            rdrStatus.classList.add("rdr-status-ok");
+            rdrForm.reset();
+          } else {
+            rdrStatus.textContent = "Something went wrong. Please try again, or call 918-804-4094.";
+            rdrStatus.classList.add("rdr-status-error");
+            trackEvent("lead_form_error", { event_category: "Lead", event_label: "Homepage main form" });
+          }
+        } catch (err) {
+          rdrStatus.textContent = "Network error. Please try again, or call 918-804-4094.";
+          rdrStatus.classList.add("rdr-status-error");
+          trackEvent("lead_form_network_error", { event_category: "Lead", event_label: "Homepage main form" });
+        }
+      });
+    }
+
+    // SERVICE MODAL LOGIC
+    const modalBackdrop = document.getElementById("rdrServiceModalBackdrop");
+    const modalServiceNameEl = document.getElementById("rdrModalServiceName");
+    const modalServiceInput = document.getElementById("rdrModalServiceInput");
+    const modalCloseBtn = document.getElementById("rdrModalCloseBtn");
+    const modalCancelBtn = document.getElementById("rdrModalCancelBtn");
+    const serviceForm = document.getElementById("rdrServiceForm");
+    const serviceFormStatus = document.getElementById("rdrServiceFormStatus");
+
+    function openServiceModal(serviceName) {
+      if (modalBackdrop) {
+        modalBackdrop.classList.add("rdr-modal-open");
+        if (modalServiceNameEl) modalServiceNameEl.textContent = serviceName;
+        if (modalServiceInput) modalServiceInput.value = serviceName;
+        if (serviceFormStatus) {
+          serviceFormStatus.textContent = "";
+          serviceFormStatus.className = "rdr-modal-status";
+        }
+        trackEvent("service_modal_open", { event_category: "Engagement", event_label: serviceName || "Service" });
+      }
+    }
+
+    function closeServiceModal() {
+      if (modalBackdrop) modalBackdrop.classList.remove("rdr-modal-open");
+    }
+
+    document.querySelectorAll(".rdr-service-card").forEach(card => {
+      card.addEventListener("click", () => {
+        const serviceName = card.getAttribute("data-service") || "Service";
+        openServiceModal(serviceName);
+      });
+    });
+
+    if (modalCloseBtn) modalCloseBtn.addEventListener("click", closeServiceModal);
+    if (modalCancelBtn) modalCancelBtn.addEventListener("click", closeServiceModal);
+
+    if (modalBackdrop) {
+      modalBackdrop.addEventListener("click", (e) => {
+        if (e.target === modalBackdrop) closeServiceModal();
+      });
+    }
+
+    // Service popup form AJAX submit
+    if (serviceForm && serviceFormStatus) {
+      serviceForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        serviceFormStatus.textContent = "";
+        serviceFormStatus.className = "rdr-modal-status";
+
+        trackEvent("lead_form_submit_attempt", { event_category: "Lead", event_label: "Homepage service modal" });
+
+        const formData = new FormData(serviceForm);
+
+        try {
+          const response = await fetch(serviceForm.action, {
+            method: "POST",
+            body: formData,
+            headers: { "Accept": "application/json" }
+          });
+
+          if (response.ok) {
+            trackEvent("lead_submit", { event_category: "Lead", event_label: "Homepage service modal" });
+
+            serviceFormStatus.textContent = "Thanks! Your request was sent. We’ll be in touch soon.";
+            serviceFormStatus.classList.add("rdr-modal-status-ok");
+            serviceForm.reset();
+          } else {
+            serviceFormStatus.textContent = "Something went wrong. Please try again, or call 918-804-4094.";
+            serviceFormStatus.classList.add("rdr-modal-status-error");
+            trackEvent("lead_form_error", { event_category: "Lead", event_label: "Homepage service modal" });
+          }
+        } catch (err) {
+          serviceFormStatus.textContent = "Network error. Please try again, or call 918-804-4094.";
+          serviceFormStatus.classList.add("rdr-modal-status-error");
+          trackEvent("lead_form_network_error", { event_category: "Lead", event_label: "Homepage service modal" });
+        }
+      });
+    }
+
+    // SCHEDULE MODAL LOGIC
+    const scheduleBackdrop = document.getElementById("rdrScheduleModalBackdrop");
+    const scheduleBtnMain = document.getElementById("rdrScheduleBtn");
+    const scheduleBtnSecondary = document.getElementById("rdrScheduleBtnSecondary");
+    const scheduleCloseBtn = document.getElementById("rdrScheduleModalCloseBtn");
+    const scheduleCancelBtn = document.getElementById("rdrScheduleModalCancelBtn");
+    const scheduleForm = document.getElementById("rdrScheduleForm");
+    const scheduleFormStatus = document.getElementById("rdrScheduleFormStatus");
+
+    function openScheduleModal() {
+      if (scheduleBackdrop) {
+        scheduleBackdrop.classList.add("rdr-modal-open");
+        if (scheduleFormStatus) {
+          scheduleFormStatus.textContent = "";
+          scheduleFormStatus.className = "rdr-modal-status";
+        }
+        trackEvent("schedule_modal_open", { event_category: "Engagement", event_label: "Homepage schedule modal" });
+      }
+    }
+
+    function closeScheduleModal() {
+      if (scheduleBackdrop) scheduleBackdrop.classList.remove("rdr-modal-open");
+    }
+
+    if (scheduleBtnMain) scheduleBtnMain.addEventListener("click", openScheduleModal);
+    if (scheduleBtnSecondary) scheduleBtnSecondary.addEventListener("click", openScheduleModal);
+
+    if (scheduleCloseBtn) scheduleCloseBtn.addEventListener("click", closeScheduleModal);
+    if (scheduleCancelBtn) scheduleCancelBtn.addEventListener("click", closeScheduleModal);
+
+    if (scheduleBackdrop) {
+      scheduleBackdrop.addEventListener("click", (e) => {
+        if (e.target === scheduleBackdrop) closeScheduleModal();
+      });
+    }
+
+    // Schedule form AJAX submit
+    if (scheduleForm && scheduleFormStatus) {
+      scheduleForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        scheduleFormStatus.textContent = "";
+        scheduleFormStatus.className = "rdr-modal-status";
+
+        trackEvent("lead_form_submit_attempt", { event_category: "Lead", event_label: "Homepage schedule modal" });
+
+        const formData = new FormData(scheduleForm);
+
+        try {
+          const response = await fetch(scheduleForm.action, {
+            method: "POST",
+            body: formData,
+            headers: { "Accept": "application/json" }
+          });
+
+          if (response.ok) {
+            trackEvent("lead_submit", { event_category: "Lead", event_label: "Homepage schedule modal" });
+
+            scheduleFormStatus.textContent = "Thanks! Your scheduling request was sent. We’ll be in touch soon to confirm.";
+            scheduleFormStatus.classList.add("rdr-modal-status-ok");
+            scheduleForm.reset();
+          } else {
+            scheduleFormStatus.textContent = "Something went wrong. Please try again, or call 918-804-4094.";
+            scheduleFormStatus.classList.add("rdr-modal-status-error");
+            trackEvent("lead_form_error", { event_category: "Lead", event_label: "Homepage schedule modal" });
+          }
+        } catch (err) {
+          scheduleFormStatus.textContent = "Network error. Please try again, or call 918-804-4094.";
+          scheduleFormStatus.classList.add("rdr-modal-status-error");
+          trackEvent("lead_form_network_error", { event_category: "Lead", event_label: "Homepage schedule modal" });
+        }
+      });
+    }
+
+    // Global ESC to close modals (service + schedule)
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        closeServiceModal();
+        closeScheduleModal();
+      }
+    });
+  </script>
+</body>
+</html>
